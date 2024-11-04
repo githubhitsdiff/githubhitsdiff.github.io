@@ -1,156 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Bot Website</title>
+/* General Body Styling */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Item', sans-serif; /* Apply Item font */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
 
-  <!-- Google Fonts: Importing Item Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Item&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  <style>
-    /* General Body Styling */
-    body {
-      background-color: #f0f0f0;
-      font-family: 'Item', sans-serif; /* Apply Item font */
-      margin: 0;
-      padding: 0;
-      color: #333;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
+
+/* Header */
+h1 {
+    color: #4CAF50;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Button Styling */
+.invite-btn, button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    display: block;
+    border-radius: 4px; /* Rounded corners */
+    text-align: center;
+    text-decoration: none; /* For the invite link */
+    transition: background-color 0.3s;
+}
+
+.invite-btn:hover, button:hover {
+    background-color: #45a049;
+}
+
+/* Section Styling */
+section {
+    margin: 40px 0;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
     }
 
-    /* Navigation */
-    nav {
-      background-color: #333;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    .container {
+        padding: 10px;
     }
 
     nav ul li {
-      display: inline;
-      margin-right: 20px;
+        display: block; /* Stack navigation items */
+        margin: 5px 0;
     }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Header */
-    h1 {
-      color: #4CAF50;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    /* Main Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Button Styling */
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      margin: 10px 0;
-      display: block;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    /* Section Styling */
-    section {
-      margin: 40px 0;
-    }
-
-    /* Footer Styling */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-
-    /* Responsive Media Queries */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 24px;
-      }
-      .container {
-        padding: 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="container">
-    <h1><i class="fas fa-robot"></i> Welcome to My Bot</h1>
-    <p>This website showcases my Discord bot features and functionalities.</p>
-    <button onclick="toggleContent()">Show/Hide Features</button>
-
-    <!-- Features Section (Hidden by default) -->
-    <section id="features" style="display:none;">
-      <h2>Bot Features</h2>
-      <ul>
-        <li>Automated responses</li>
-        <li>Moderation tools</li>
-        <li>Interactive commands</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: bot@example.com</p>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 My Bot Website</p>
-  </footer>
-
-  <!-- JavaScript for Show/Hide Button -->
-  <script>
-    function toggleContent() {
-      var features = document.getElementById("features");
-      if (features.style.display === "none") {
-        features.style.display = "block";
-      } else {
-        features.style.display = "none";
-      }
-    }
-  </script>
-
-</body>
-</html>
+}
