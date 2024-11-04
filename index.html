@@ -4,156 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Bot's Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Item&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General Body Styling */
-        body {
-            background-color: #f0f0f0;
-            font-family: 'Item', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        h1 {
-            color: #4CAF50;
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Button Styling */
-        .invite-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .invite-btn:hover {
-            background-color: #45a049;
-        }
-
-        /* Section Styling */
-        section {
-            margin: 40px 0;
-        }
-
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Responsive Media Queries */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 24px;
-            }
-            .container {
-                padding: 10px;
-            }
-            nav ul li {
-                display: block;
-                margin: 5px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Welcome to Your Bot's Website</h1>
+        <p>Your bot's home for all the features and commands!</p>
+    </header>
 
-    <!-- Navigation Bar -->
-    <nav>
+    <section id="features">
+        <h2>Bot Features & Commands</h2>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><strong>/Gray-cash</strong> - Check your virtual wallet</li>
+            <li><strong>/Gray-leaderboard</strong> - See the top players</li>
+            <li><strong>/Gray-coinflip</strong> - Flip a coin and test your luck</li>
+            <li><strong>/daily</strong> - Get your daily rewards</li>
         </ul>
-    </nav>
+        <p>Our bot also offers:</p>
+        <ul>
+            <li>Automated responses for frequently asked questions.</li>
+            <li>Moderation tools to help keep your server safe.</li>
+            <li>Interactive commands for user engagement.</li>
+        </ul>
+    </section>
 
-    <!-- Main Content -->
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-robot"></i> Welcome to Your Bot's Website</h1>
-            <p>Your bot's home for all the features and commands!</p>
-        </header>
+    <section id="invite">
+        <h2>Invite the Bot</h2>
+        <p>Click the button below to invite the bot to your Discord server:</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1302645407381323826&permissions=8&integration_type=0&scope=bot+applications.commands" class="invite-btn">Invite the Bot</a>
+    </section>
 
-        <section id="features">
-            <h2>Bot Features & Commands</h2>
-            <ul>
-                <li><strong>/Gray-cash</strong> - Check your virtual wallet</li>
-                <li><strong>/Gray-leaderboard</strong> - See the top players</li>
-                <li><strong>/Gray-coinflip</strong> - Flip a coin and test your luck</li>
-                <li><strong>/daily</strong> - Get your daily rewards</li>
-            </ul>
-        </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need support, feel free to reach out:</p>
+        <p>Email: support@example.com</p>
+        <p>Join our community on Discord: <a href="https://discord.gg/xRsTBnD2Am">Discord Server</a></p>
+    </section>
 
-        <section id="invite">
-            <h2>Invite the Bot</h2>
-            <p>Click the button below to invite the bot to your Discord server:</p>
-            <a href="https://discord.com/oauth2/authorize?client_id=1302645407381323826&permissions=8&integration_type=0&scope=bot+applications.commands" class="invite-btn">Invite the Bot</a>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Contact us on Discord: <a href="https://discord.gg/xRsTBnD2Am">Discord Server</a></p>
-        </section>
-    </div>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Your Bot's Website</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
