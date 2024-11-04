@@ -38,10 +38,15 @@ nav ul li a:hover {
 }
 
 /* Header */
+header {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
 h1 {
     color: #4CAF50;
-    text-align: center;
-    padding: 20px 0;
 }
 
 /* Main Container */
@@ -76,6 +81,10 @@ h1 {
 /* Section Styling */
 section {
     margin: 40px 0;
+    padding: 20px; /* Add padding for sections */
+    background-color: #fff; /* Add background color */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Footer Styling */
@@ -102,5 +111,9 @@ footer {
     nav ul li {
         display: block; /* Stack navigation items */
         margin: 5px 0;
+    }
+
+    section {
+        margin: 20px 0; /* Reduce margin for mobile */
     }
 }
